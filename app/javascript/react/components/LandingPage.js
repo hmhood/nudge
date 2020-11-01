@@ -1,9 +1,9 @@
 import React from "react"
-import HowItWorks from './HowItWorks'
+import Album from './Album'
  
 const LandingPage = (props) => {
   return (
-    <HowItWorks />
+    <Album />
   )
 }
 
