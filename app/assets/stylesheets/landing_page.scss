@@ -1,3 +1,5 @@
+@import "./color_variables.scss";
+
 .callout.large {
   margin: 75px 6rem 0.5rem 6rem;
 }
@@ -8,9 +10,26 @@
 
 #book-pic {
   max-width: 250px;
-  
 }
 
 #research-pic {
   max-width: 250px;
 }
+
+.app-description {
+  color: gray;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.welcome {
+  text-align: center;
+  border: 2px solid $primary;
+  border-radius: .2rem;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+
