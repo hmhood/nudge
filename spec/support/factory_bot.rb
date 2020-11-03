@@ -9,4 +9,9 @@ FactoryBot.define do
     phone_number { '617-123-4567' }
     password_confirmation { 'password' }
   end
+
+  factory :reminder do 
+    time { '07:00' }
+    medication { 'Advil' }
+  end
 end
