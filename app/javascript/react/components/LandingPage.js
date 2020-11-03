@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const LandingPage = (props) => {
   return (
@@ -11,9 +12,9 @@ export const LandingPage = (props) => {
         <button className="button" href="#">
           Create Reminder
         </button>
-        <button className="hollow button secondary" href="#">
-          My Reminders
-        </button>
+        <Link to="/reminders">
+          <button className="hollow button secondary">My Reminders</button>
+        </Link>
       </div>
       <div className="grid-container how-it-works">
         <h3 className="text-left">How it Works</h3>
