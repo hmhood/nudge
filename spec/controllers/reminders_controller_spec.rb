@@ -37,4 +37,18 @@ RSpec.describe Api::V1::RemindersController, type: :controller do
       expect(returned_json[0]["time"]).to eq "2000-01-01T08:25:00.000Z"
     end
   end
+
+  describe "POST#create" do
+    it "creates a new reminder" do
+      sign_in test_user1
+      post_json = { 
+         time: "12:45",
+         medication: "test medication",
+      }
+
+      prev_count = test_user1.reminders.count
+      post(:create, params: post_json, format: :json)
+      expect(test_user1.reminders.count).to eq(prev_count + 1)
+    end
+  end
 end

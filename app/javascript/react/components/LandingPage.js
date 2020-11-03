@@ -9,9 +9,11 @@ export const LandingPage = (props) => {
         <h3 className="app-description">
           A simple app to help you adhere to your personal medication regimen.
         </h3>
-        <button className="button" href="#">
-          Create Reminder
-        </button>
+        <Link to="/reminders/new">
+          <button className="button" href="#">
+            Create Reminder
+          </button>
+        </Link>
         <Link to="/reminders">
           <button className="hollow button secondary">My Reminders</button>
         </Link>
