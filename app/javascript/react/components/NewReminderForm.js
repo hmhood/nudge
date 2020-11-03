@@ -8,7 +8,6 @@ const NewReminderForm = (props) => {
   });
 
   const [shouldRedirect, setShouldRedirect] = useState(false);
-
   const [errors, setErrors] = useState("");
 
   let errorsDiv = null;
@@ -25,7 +24,11 @@ const NewReminderForm = (props) => {
     fetch("/api/v1/reminders", {
       method: "POST",
       credentials: "same-origin",
-      body: JSON.stringify({ reminder: formFields }),
+      body: JSON.stringify(formFields),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
     })
       .then((response) => {
         if (response.ok) {
@@ -38,7 +41,11 @@ const NewReminderForm = (props) => {
       })
       .then((response) => response.json())
       .then((body) => {
-        setShouldRedirect(true);
+        if (body.errors) {
+          setErrors(body.errors);
+        } else {
+          setShouldRedirect(true);
+        }
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   };
@@ -56,7 +63,8 @@ const NewReminderForm = (props) => {
   }
 
   return (
-    <div className="grid-container">
+    <div className="grid-container text-center">
+      <h2> Create a New Reminder</h2>
       <form onSubmit={postNewReminder}>
         {errorsDiv}
         <div className="grid-x grid-margin-x align-middle">
@@ -76,14 +84,14 @@ const NewReminderForm = (props) => {
           <label className="cell small-4 text-right" htmlFor="medication">
             <h3>Medication:</h3>
           </label>
-          <div className="cell small-4">
-            <textarea
-              id="medication"
-              name="medication"
-              onChange={handleChange}
-              value={formFields.medication}
-            />
-          </div>
+          <input
+            className="cell small-4 field"
+            type="text"
+            name="medication"
+            id="medication"
+            onChange={handleChange}
+            value={formFields.medication}
+          />
         </div>
         <div className="grid-x align-center">
           <input

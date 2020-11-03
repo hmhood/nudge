@@ -5,6 +5,17 @@ class Api::V1::RemindersController < ApiController
     render json: current_user.reminders
   end
 
+  def create 
+    reminder = Reminder.new(reminder_params)
+    reminder.user = current_user
+    
+    if reminder.save
+      render json: reminder
+    else 
+      render json: { errors: reminder.errors.full_messages.to_sentence }
+    end
+  end
+
   private 
 
   def authenticate_user
