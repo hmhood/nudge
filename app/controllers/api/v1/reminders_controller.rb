@@ -5,7 +5,6 @@ class Api::V1::RemindersController < ApiController
     render json: current_user.reminders
   end
 
-  
   private 
 
   def authenticate_user

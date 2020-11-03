@@ -4,4 +4,3 @@ class Reminder < ApplicationRecord
   validates :medication, presence: true
   validates :time, presence: true
 end
-
