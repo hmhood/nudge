@@ -1,3 +1,5 @@
+require 'sidekiq-scheduler'
+
 class SendReminderText  
   include Sidekiq::Worker 
 
