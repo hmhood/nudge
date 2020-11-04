@@ -10,7 +10,7 @@ export const LandingPage = (props) => {
           A simple app to help you adhere to your personal medication regimen.
         </h3>
         <Link to="/reminders/new">
-          <button className="button" href="#">
+          <button className="button landing">
             Create Reminder
           </button>
         </Link>
@@ -26,6 +26,7 @@ export const LandingPage = (props) => {
               <img
                 className="how-it-works-pic"
                 src="https://media.istockphoto.com/photos/businessman-using-laptop-computer-in-the-office-picture-id1137014758?k=6&m=1137014758&s=612x612&w=0&h=vWtD5innYnJfvVfsYEgT3-9xfs2Li5J7ra3yb1vWwPA="
+                alt="person using laptop"
               />
               <div className="card-section">
                 <h4>Create an Account</h4>
@@ -41,6 +42,7 @@ export const LandingPage = (props) => {
               <img
                 className="how-it-works-pic"
                 src="https://images.pexels.com/photos/280254/pexels-photo-280254.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="alarm clock"
               />
               <div className="card-section">
                 <h4>Add a Reminder</h4>
@@ -56,6 +58,7 @@ export const LandingPage = (props) => {
               <img
                 className="how-it-works-pic"
                 src="https://images.pexels.com/photos/6400/woman-smartphone-girl-technology.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                alt="woman looking at smart phone"
               />
               <div className="card-section">
                 <h4>Receive Daily SMS</h4>
@@ -76,6 +79,7 @@ export const LandingPage = (props) => {
               <img
                 id="book-pic"
                 src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348322381i/3450744._UY400_SS400_.jpg"
+                alt="book cover Nudge"
               />
             </div>
           </div>
@@ -103,6 +107,7 @@ export const LandingPage = (props) => {
               <img
                 id="research-pic"
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                alt="researchers on laptops"
               />
             </div>
           </div>
