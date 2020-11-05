@@ -53,6 +53,6 @@ gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails', '~> 6.5'
 gem 'webpacker', '~> 3.3'
-gem 'sidekiq'
-gem 'redis'
+gem 'sidekiq', '~> 5.0'
+gem 'redis', '~> 4.0'
 gem 'twilio-ruby'
