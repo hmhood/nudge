@@ -10,7 +10,7 @@ class Api::V1::RemindersController < ApiController
     reminder.user = current_user
     
     if reminder.save
-      SendReminderText.perform_at(3.minutes.from_now, reminder.id)
+      SendReminderText.perform_in(3.minutes, reminder.id)
       render json: reminder
     else 
       render json: { errors: reminder.errors.full_messages.to_sentence }

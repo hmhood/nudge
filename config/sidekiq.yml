@@ -1,4 +1,4 @@
-:schedule:
-  send_reminder_text:
-    cron: '0 * * * * *'   # Runs once per minute
-    class: SendReminderText 
+# :schedule:
+#   send_reminder_text:
+#     cron: '0 * * * * *'   # Runs once per minute
+#     class: SendReminderText 
