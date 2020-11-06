@@ -10,11 +10,23 @@ const ReminderTile = (props) => {
     minute: "2-digit",
   });
 
+  const onDeleteClickHander = (event) => {
+    event.preventDefault();
+    props.deleteReminder(props.data.id);
+  };
+
   return (
     <div className="callout">
       <h4>Reminder</h4>
       <p>Time: {time}</p>
       <p> Medication: {props.data.medication}</p>
+      <button
+        type="button"
+        className="alert button"
+        onClick={onDeleteClickHander}
+      >
+        Delete
+      </button>
     </div>
   );
 };
