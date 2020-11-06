@@ -2,6 +2,9 @@
 
 .callout.large {
   margin: 75px 6rem 0.5rem 6rem;
+  border-radius: .2rem;
+  background-color: #f2f3f5;
+  border: 1px solid $primary;
 }
 
 .how-it-works {
@@ -25,7 +28,7 @@
 
 .welcome {
   text-align: center;
-  border: 2px solid $primary;
+  border: 3px solid $primary;
   border-radius: .2rem;
   width: fit-content;
   margin: 50px auto;
@@ -34,4 +37,12 @@
 
 .button.landing {
   margin-right: 8px;
+}
+
+.logo-text{
+  font-family: 'Arima Madurai', cursive;
+}
+
+.card {
+  border-radius: .2rem;
 }
