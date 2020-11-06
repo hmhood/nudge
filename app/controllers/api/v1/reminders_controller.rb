@@ -16,6 +16,13 @@ class Api::V1::RemindersController < ApiController
     end
   end
 
+  def destroy 
+    reminder = Reminder.find(params[:id])
+    reminder.destroy
+    
+    render json: current_user.reminders 
+  end
+
   private 
 
   def authenticate_user

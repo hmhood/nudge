@@ -51,4 +51,14 @@ RSpec.describe Api::V1::RemindersController, type: :controller do
       expect(test_user1.reminders.count).to eq(prev_count + 1)
     end
   end
+
+  describe "POST#destroy" do
+    it "deletes a user's reminder" do
+      sign_in test_user1
+      
+      prev_count = test_user1.reminders.count
+      post(:destroy, params: {id: reminder_1.id}, format: :json)
+      expect(test_user1.reminders.count).to eq(prev_count - 1)
+    end
+  end
 end

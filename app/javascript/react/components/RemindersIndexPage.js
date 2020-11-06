@@ -29,6 +29,31 @@ const RemindersIndexPage = (props) => {
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
 
+  const deleteReminder = (reminderId) => {
+    fetch(`/api/v1/reminders/${reminderId}`, {
+      credentials: "same-origin",
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+          throw error;
+        }
+      })
+      .then((response) => response.json())
+      .then((userReminders) => {
+        setReminders(userReminders);
+      })
+      .catch((error) => console.error(`Error in fetch: ${error.message}`));
+  };
+
   let errorsDiv = null;
 
   if (errorMessage !== null) {
@@ -45,7 +70,13 @@ const RemindersIndexPage = (props) => {
     reminderList = <p>No reminders yet!</p>;
   } else {
     reminderList = reminders.map((reminderObject) => {
-      return <ReminderTile key={reminderObject.id} data={reminderObject} />;
+      return (
+        <ReminderTile
+          key={reminderObject.id}
+          data={reminderObject}
+          deleteReminder={deleteReminder}
+        />
+      );
     });
   }
 
