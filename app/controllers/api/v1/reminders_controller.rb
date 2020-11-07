@@ -32,6 +32,6 @@ class Api::V1::RemindersController < ApiController
   end
 
   def reminder_params
-    params.permit(:time, :medication)
+    params.permit(:time, :medication, :note)
   end
 end

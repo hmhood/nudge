@@ -5,6 +5,7 @@ const NewReminderForm = (props) => {
   const [formFields, setFormFields] = useState({
     time: "",
     medication: "",
+    note: "",
   });
 
   const [shouldRedirect, setShouldRedirect] = useState(false);
@@ -91,6 +92,18 @@ const NewReminderForm = (props) => {
             id="medication"
             onChange={handleChange}
             value={formFields.medication}
+          />
+        </div>
+        <div className="grid-x grid-margin-x align-middle">
+          <label className="cell small-4 text-right" htmlFor="note">
+            <h3>Notes:</h3>
+          </label>
+          <textarea
+            className="cell small-4 text-area"
+            name="note"
+            id="note"
+            onChange={handleChange}
+            value={formFields.note}
           />
         </div>
         <div className="grid-x align-center">

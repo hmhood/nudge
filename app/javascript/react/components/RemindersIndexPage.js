@@ -83,6 +83,9 @@ const RemindersIndexPage = (props) => {
   return (
     <div>
       <h3>My Reminders</h3>
+      <a className="button primary" href="/reminders/new">
+        Add a reminder
+      </a>
       <div>{reminderList}</div>
       {errorsDiv}
     </div>
