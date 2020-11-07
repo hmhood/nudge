@@ -21,7 +21,7 @@ const ReminderTile = (props) => {
   }
 
   return (
-    <div className="callout">
+    <div className="callout reminder">
       <h4>Reminder</h4>
       <p>Time: {time}</p>
       <p> Medication: {props.data.medication}</p>
