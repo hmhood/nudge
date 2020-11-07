@@ -10,9 +10,7 @@ export const LandingPage = (props) => {
           A simple app to help you adhere to your personal medication regimen.
         </h3>
         <Link to="/reminders/new">
-          <button className="button landing">
-            Create Reminder
-          </button>
+          <button className="button landing">Create Reminder</button>
         </Link>
         <Link to="/reminders">
           <button className="hollow button secondary">My Reminders</button>
@@ -86,13 +84,15 @@ export const LandingPage = (props) => {
           <div className="media-object-section">
             <h4>What is 'Nudge theory'?</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut en
-              im ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr
-              ehenderit in voluptate velit esse cillum dolore eu fugiat nulla p
-              ariatur. Excepteur sint occaecat cupidatat non proident, sunt in c
-              ulpa qui officia deserunt mollit anim id est laborum.
+              "Nudge is a concept in behavioral economics, political theory, and
+              behavioral sciences which proposes positive reinforcement and
+              indirect suggestions as ways to influence the behavior and
+              decision making of groups or individuals. Nudging contrasts with
+              other ways to achieve compliance, such as education, legislation
+              or enforcement. The nudge concept was popularized in the 2008 book
+              Nudge: Improving Decisions About Health, Wealth, and Happiness, by
+              two American scholars at the University of Chicago: behavioral
+              economist Richard Thaler and legal scholar Cass Sunstein..."
             </p>
             <a href="https://www.goodreads.com/book/show/3450744-nudge">
               Link to Book
@@ -114,13 +114,17 @@ export const LandingPage = (props) => {
           <div className="media-object-section">
             <h4>Research</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut en
-              im ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr
-              ehenderit in voluptate velit esse cillum dolore eu fugiat nulla p
-              ariatur. Excepteur sint occaecat cupidatat non proident, sunt in c
-              ulpa qui officia deserunt mollit anim id est laborum.
+              "In the treatment of HIV infections, appointment attendance and
+              medication adherence is critical to good control of this disease.
+              Various methods have been attempted to increase compliance,
+              including the use of text message reminders, which has had a
+              number of published studies to evaluate its usefulness. Studies in
+              urban HIV clinics in the U.S. have found that the vast majority of
+              patients own mobile phones and would use them to enhance
+              medication adherence (Miller & Himelhoch, 2013). Patients and
+              providers both have noted some of the benefits of text message
+              reminders, such as their ease of use and the ability to
+              personalize messages and their timing (Baranoski et al., 2014)..."
             </p>
             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5480218/">
               Read the Study

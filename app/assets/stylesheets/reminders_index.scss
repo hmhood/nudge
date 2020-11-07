@@ -1,0 +1,13 @@
+@import "./color_variables.scss";
+
+.callout.reminder {
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid $primary;
+  border-radius: .2em;
+}
+
+.reminders-list {
+  margin-top: 3rem;
+}
