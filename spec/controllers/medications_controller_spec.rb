@@ -32,4 +32,28 @@ RSpec.describe Api::V1::MedicationsController, type: :controller do
       expect(returned_json[0]["directions"]).to eq "take as needed"
     end
   end
+
+  describe "POST#create" do
+    it "creates a new medication" do
+      sign_in test_user1
+      post_json = { 
+         name: "test medication",
+         dosage: "25 mg",
+      }
+
+      prev_count = test_user1.medications.count
+      post(:create, params: post_json, format: :json)
+      expect(test_user1.medications.count).to eq(prev_count + 1)
+    end
+  end
+
+  describe "POST#destroy" do
+    it "deletes a user's medication" do
+      sign_in test_user1
+      
+      prev_count = test_user1.medications.count
+      post(:destroy, params: {id: first_medication.id}, format: :json)
+      expect(test_user1.medications.count).to eq(prev_count - 1)
+    end
+  end
 end
