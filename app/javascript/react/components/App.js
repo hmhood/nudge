@@ -4,6 +4,7 @@ import LandingPage from "./LandingPage";
 import MedicationIndexPage from "./MedicationsIndexPage";
 import NewReminderForm from "./NewReminderForm";
 import RemindersIndexPage from "./RemindersIndexPage";
+import NewMedicationForm from "./NewMedicationForm"
 
 export const App = (props) => {
   return (
@@ -13,6 +14,7 @@ export const App = (props) => {
         <Route exact path="/reminders" component={RemindersIndexPage} />
         <Route exact path="/reminders/new" component={NewReminderForm} />
         <Route exact path="/medications" component={MedicationIndexPage} />
+        <Route exact path="/medications/new" component={NewMedicationForm} />
       </Switch>
     </BrowserRouter>
   );

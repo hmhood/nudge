@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MedicationIndexPage from "./MedicationsIndexPage";
 import ReminderTile from "./ReminderTile";
 
 const RemindersIndexPage = (props) => {

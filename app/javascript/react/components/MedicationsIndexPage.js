@@ -83,7 +83,7 @@ const MedicationIndexPage = (props) => {
   return (
     <div className="grid-container">
       <h3>My Medications</h3>
-      <a className="button primary" href="/medication/new">
+      <a className="button primary" href="/medications/new">
         Add a medication
       </a>
       <div>{medicationList}</div>

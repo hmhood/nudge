@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/reminders', to: 'homes#index'
   get '/reminders/new', to: 'homes#index'
   get '/medications', to: 'homes#index'
+  get '/medications/new', to: 'homes#index'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :reminders, only: [:index, :create, :destroy]
-      resources :medications, only: [:index, :destroy]
+      resources :medications, only: [:index, :create, :destroy]
     end
   end
 end
