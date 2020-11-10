@@ -14,8 +14,13 @@ const MedicationTile = (props) => {
   return (
     <div className="callout">
       <h4>Medication</h4>
-      <p>Name: {props.data.name}</p>
-      <p>Dosage: {props.data.dosage}</p>
+      <i className="fas fa-pills fa-2x"></i>
+      <p>
+        <b>Name:</b> {props.data.name}
+      </p>
+      <p>
+        <b>Dosage:</b> {props.data.dosage}
+      </p>
       {directionsParagraph}
       <button
         type="button"
