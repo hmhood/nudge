@@ -1,10 +1,8 @@
 import React from "react";
 
 const ReminderTile = (props) => {
-  // refactor
   let timeString = props.data.time;
-  let sliced_time = timeString.slice(0, -2);
-  let date = new Date(sliced_time);
+  let date = new Date(timeString);
   let time = date.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
