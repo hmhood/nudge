@@ -27,6 +27,9 @@ const MedicationSearch = (props) => {
         <p>
           <b>Dosage Information:</b> {searchResults.dosage_info}
         </p>
+        <p>
+          <b>Warnings:</b> {searchResults.warnings}
+        </p>
       </div>
     );
   }

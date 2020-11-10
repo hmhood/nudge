@@ -38,9 +38,14 @@ class Api::V1::MedicationsController < ApiController
         generic_name = "N/A"
       end
       dosage_info = parsed_response["results"][0]["dosage_and_administration"][0]
-      # warnings = parsed_response["results"][0]["warnings"][0]
+      if parsed_response["results"] && parsed_response["results"][0] && parsed_response["results"][0]["warnings"]
+        warnings = parsed_response["results"][0]["warnings"][0]
+      end
+      if warnings === nil
+        warnings = "N/A"
+      end
 
-      render json: { dosage_info: dosage_info, generic_name: generic_name}
+      render json: { generic_name: generic_name, dosage_info: dosage_info, warnings: warnings}
     end
   end
 
