@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :reminders, only: [:index, :create, :destroy]
-      resources :medications, only: [:index, :create, :destroy]
+      resources :medications, only: [:index, :create, :destroy] do
+        collection do
+          get 'search'
+        end
+      end
     end
   end
 end

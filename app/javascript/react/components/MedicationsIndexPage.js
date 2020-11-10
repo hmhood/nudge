@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MedicationSearch from "./MedicationSearch";
 import MedicationTile from "./MedicationTile";
 
 const MedicationIndexPage = (props) => {
@@ -88,6 +89,7 @@ const MedicationIndexPage = (props) => {
       </a>
       <div>{medicationList}</div>
       {errorsDiv}
+      <MedicationSearch />
     </div>
   );
 };

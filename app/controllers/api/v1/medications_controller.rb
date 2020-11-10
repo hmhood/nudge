@@ -23,11 +23,32 @@ class Api::V1::MedicationsController < ApiController
     render json: current_user.medications
   end
 
+  def search
+    medication = params[:query]
+    url = "https://api.fda.gov/drug/label.json?search='#{medication}'"
+    api_response = Faraday.get(url)
+    parsed_response = JSON.parse(api_response.body)
+  
+    if parsed_response["error"]
+      error = parsed_response["error"]["message"]
+      render json: { error: error }
+    else 
+      generic_name = parsed_response["results"][0]["openfda"]["generic_name"]
+      if generic_name === nil
+        generic_name = "N/A"
+      end
+      dosage_info = parsed_response["results"][0]["dosage_and_administration"][0]
+      # warnings = parsed_response["results"][0]["warnings"][0]
+
+      render json: { dosage_info: dosage_info, generic_name: generic_name}
+    end
+  end
+
   private 
 
   def authenticate_user
     if !user_signed_in?
-      render json: {signInError: "Please sign in first before continuing."}
+      render json: { signInError: "Please sign in first before continuing." }
     end
   end
 

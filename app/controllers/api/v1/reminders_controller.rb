@@ -27,7 +27,7 @@ class Api::V1::RemindersController < ApiController
 
   def authenticate_user
     if !user_signed_in?
-      render json: {signInError: "Please sign in first before continuing."}
+      render json: { signInError: "Please sign in first before continuing." }
     end
   end
 
