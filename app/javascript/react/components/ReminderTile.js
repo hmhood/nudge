@@ -15,15 +15,33 @@ const ReminderTile = (props) => {
 
   let notesParagraph = null;
   if (props.data.note) {
-    notesParagraph = <p>Notes: {props.data.note}</p>;
+    notesParagraph = (
+      <p>
+        <b>Notes: </b>
+        {props.data.note}
+      </p>
+    );
+  }
+
+  let icon = null;
+  if (date.getHours() < 12) {
+    icon = <i className="fas fa-sun fa-2x"></i>;
+  } else {
+    icon = <i className="fas fa-moon fa-2x"></i>;
   }
 
   return (
     <div className="callout reminder">
       <h4>Reminder</h4>
-      <i className="fas fa-sun"></i>
-      <p>Time: {time}</p>
-      <p> Medication: {props.data.medication}</p>
+      {icon}
+      <p>
+        <b>Time: </b>
+        {time}
+      </p>
+      <p>
+        <b>Medication: </b>
+        {props.data.medication}
+      </p>
       {notesParagraph}
       <button
         type="button"
