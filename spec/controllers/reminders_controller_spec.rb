@@ -34,7 +34,7 @@ RSpec.describe Api::V1::RemindersController, type: :controller do
       expect(returned_json.length).to eq 1
       
       expect(returned_json[0]["medication"]).to eq "Allegra"
-      expect(returned_json[0]["time"]).to eq "2000-01-01T08:25:00.000Z"
+      expect(returned_json[0]["time"]).to eq "2000-01-01T08:25:00.000-05:00"
     end
   end
 
