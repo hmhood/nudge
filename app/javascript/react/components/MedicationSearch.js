@@ -60,7 +60,7 @@ const MedicationSearch = (props) => {
   };
 
   return (
-    <div className="grid-container text-center search-div">
+    <div className="callout search text-center">
       <h2>Get information about a medication</h2>
       <form onSubmit={getInfo}>
         <div className="grid-x grid-margin-x align-middle">

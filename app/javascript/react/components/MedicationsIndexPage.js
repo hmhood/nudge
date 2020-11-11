@@ -82,14 +82,20 @@ const MedicationIndexPage = (props) => {
   }
 
   return (
-    <div className="grid-container">
+    <div className="medication-index-container">
       <h3>My Medications</h3>
       <a className="button primary" href="/medications/new">
         Add a medication
       </a>
-      <div>{medicationList}</div>
-      {errorsDiv}
-      <MedicationSearch />
+      <div className="grid-x grid-padding-x">
+        <div className="cell large-4">
+          {medicationList}
+          {errorsDiv}
+        </div>
+        <div className="cell large-8">
+          <MedicationSearch />
+        </div>
+      </div>
     </div>
   );
 };
