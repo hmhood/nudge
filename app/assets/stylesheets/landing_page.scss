@@ -4,7 +4,7 @@
   margin: 75px 6rem 0.5rem 6rem;
   border-radius: .2rem;
   background-color: #f2f3f5;
-  border: 1px solid $primary;
+  border: 2px solid $primary;
 }
 
 .how-it-works {
@@ -19,8 +19,12 @@
   max-width: 250px;
 }
 
+.thumbnail {
+  border-radius: .5rem;
+}
+
 .app-description {
-  color: gray;
+  color: $gray;
   font-style: italic;
   font-weight: 200;
   font-size: 1em;
@@ -28,11 +32,11 @@
 
 .welcome {
   text-align: center;
-  border: 3px solid $primary;
-  border-radius: .2rem;
+  border: 3.5px solid $primary;
+  border-radius: .5rem;
   width: fit-content;
   margin: 50px auto;
-  padding: 20px;
+  padding: 35px;
 }
 
 .button.landing {
@@ -45,4 +49,19 @@
 
 .card {
   border-radius: .2rem;
+}
+
+.logo-text {
+  color: $primary
+}
+
+.button.nav {
+  border-radius: 2em;
+  margin-left: 10px;
+  color:$off-white;
+  background: $primary;
+}
+
+.button.nav:hover {
+  background: $gray;
 }

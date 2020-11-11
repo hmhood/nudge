@@ -95,7 +95,7 @@ export const LandingPage = (props) => {
               economist Richard Thaler and legal scholar Cass Sunstein..."
             </p>
             <a href="https://www.goodreads.com/book/show/3450744-nudge">
-              Link to Book
+              <b>Link to Book</b>
             </a>
           </div>
         </div>
@@ -127,7 +127,7 @@ export const LandingPage = (props) => {
               personalize messages and their timing (Baranoski et al., 2014)..."
             </p>
             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5480218/">
-              Read the Study
+              <b>Read the Study</b>
             </a>
           </div>
         </div>
