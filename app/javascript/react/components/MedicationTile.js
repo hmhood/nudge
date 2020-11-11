@@ -12,7 +12,7 @@ const MedicationTile = (props) => {
   };
 
   return (
-    <div className="callout">
+    <div className="callout medication text-center">
       <h4>Medication</h4>
       <i className="fas fa-pills fa-2x"></i>
       <p>

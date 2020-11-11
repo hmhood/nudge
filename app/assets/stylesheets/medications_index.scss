@@ -1,0 +1,21 @@
+@import "./color_variables.scss";
+
+.fa-pills {
+  color: #1fd18d;
+}
+
+.callout.medication {
+  width: 75%;
+  border: 2px solid $primary;
+  border-radius: .2em;
+  margin-left: 4rem;
+}
+
+.medication-index-container {
+  margin: 30px 30px;
+}
+
+.callout.search {
+  padding: 20px;
+  border: 3px dotted $primary;
+}
