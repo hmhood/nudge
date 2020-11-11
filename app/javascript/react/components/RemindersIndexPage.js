@@ -82,10 +82,13 @@ const RemindersIndexPage = (props) => {
   }
 
   return (
-    <div className="grid-container">
+    <div className="grid-container reminders-index-container">
       <h3>My Reminders</h3>
       <a className="button primary" href="/reminders/new">
         Add a reminder
+      </a>
+      <a className="button primary my-medications" href="/medications">
+        My Medications (beta)
       </a>
       <div className="reminders-list">{reminderList}</div>
       {errorsDiv}

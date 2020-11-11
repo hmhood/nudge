@@ -64,7 +64,7 @@ const NewMedicationForm = (props) => {
   }
 
   return (
-    <div className="grid-container text-center">
+    <div className="grid-container text-center form">
       <h2>Add a Medication</h2>
       <form onSubmit={postNewMedication}>
         {errorsDiv}

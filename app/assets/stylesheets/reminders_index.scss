@@ -1,15 +1,17 @@
 @import "./color_variables.scss";
 
 .callout.reminder {
-  width: 25%;
+  width: 30%;
   justify-content: center;
   text-align: center;
-  border: 2px solid $primary;
+  border: 3px solid $primary;
   border-radius: .2em;
+  box-shadow: 10px 5px 15px -1px $gray;
 }
 
 .reminders-list {
   margin-top: 3rem;
+  margin-left: 100px;
 }
 
 .fa-sun {
@@ -20,4 +22,12 @@
 .fa-moon {
   color: #3d1fd1;
   padding: 5px;
+}
+
+.button.my-medications {
+  margin-left: 10px;
+}
+
+.reminders-index-container {
+  margin: 30px 30px;
 }
