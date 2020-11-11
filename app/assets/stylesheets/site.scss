@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background-color: $secondary
+  background-color: $secondary;
+  border-radius: 2em;
 }
 
 .button.hollow.button {

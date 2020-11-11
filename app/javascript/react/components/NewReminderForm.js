@@ -70,7 +70,7 @@ const NewReminderForm = (props) => {
         {errorsDiv}
         <div className="grid-x grid-margin-x align-middle">
           <label className="cell small-4 text-right" htmlFor="Time">
-            <h3>Time:</h3>
+            <h3>Time*:</h3>
           </label>
           <input
             className="cell small-4 field"
@@ -115,6 +115,9 @@ const NewReminderForm = (props) => {
           />
         </div>
       </form>
+      <div>
+        <p>* Please select hour. e.g. 8:00 AM, 4:00 PM</p>
+      </div>
     </div>
   );
 };
