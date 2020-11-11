@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Nudge</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Work+Sans:700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/883ab6c09a.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <nav class="top-bar">
-    <h1><a class="logo-text" href="/">Nudge</a><%= image_tag("logo.png", size:"75x75", :alt => "nudge") %></h1>
-    <section class="top-bar-section">
-      <ul class="right no-bullet">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-      <a href="/medications">Medications</a>
-    </section>
-  </nav>
+  <head>
+    <title>Nudge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= stylesheet_link_tag 'application', media: 'all' %> <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Work+Sans:700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/883ab6c09a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="top-bar">
+      <h1><a class="logo-text" href="/">Nudge</a><%= image_tag("logo.png", size:"75x75", :alt => "nudge") %></h1>
+      <section class="top-bar-section">
+        <div class="button-group align-right">
+          <%- if current_user -%> 
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => "button nav" %>
+          <%- else -%> 
+            <%= link_to 'Sign Up', new_user_registration_path, :class => "button nav" %> <%= link_to 'Sign In', new_user_session_path,:class => "button nav" %> 
+          <%- end -%>
+        </div>
+      </section>
+    </nav>
 
-  <%- flash.each do |key, value| -%>
+    <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
     </div>
-  <%- end -%>
+    <%- end -%> 
+    
+    <%= yield %> 
+    
+    <%= javascript_include_tag 'application' %> 
 
-  <%= yield %>
-
-  <%= javascript_include_tag 'application' %>
-  
-  <%- if Rails.env.development? || Rails.env.test? -%> 
-    <%= javascript_tag do %>
-      window.railsEnv = '<%= Rails.env %>'
-    <%- end -%>
-  <%- end -%>
-  <%= javascript_pack_tag 'application' %>
-  
-  <%= yield :extra_footer %>
-</body>
+    <%- if Rails.env.development? || Rails.env.test? -%> 
+      <%= javascript_tag do %>
+        window.railsEnv = '<%= Rails.env %>' 
+      <%- end -%> 
+    <%- end -%> 
+    <%= javascript_pack_tag 'application' %> 
+    
+    <%= yield :extra_footer %>
+  </body>
 </html>
