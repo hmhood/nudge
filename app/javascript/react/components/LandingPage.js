@@ -13,7 +13,7 @@ export const LandingPage = (props) => {
           <button className="button landing">Create Reminder</button>
         </Link>
         <Link to="/reminders">
-          <button className="hollow button secondary">My Reminders</button>
+          <button className="hollow button secondary landing">My Reminders</button>
         </Link>
       </div>
       <div className="grid-container how-it-works">
