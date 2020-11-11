@@ -64,7 +64,7 @@ const NewReminderForm = (props) => {
   }
 
   return (
-    <div className="grid-container text-center reminder-form">
+    <div className="grid-container text-center form">
       <h2> Create a New Reminder</h2>
       <form onSubmit={postNewReminder}>
         {errorsDiv}
