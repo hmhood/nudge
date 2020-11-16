@@ -56,4 +56,5 @@ gem 'webpacker', '~> 3.3'
 gem 'sidekiq', '~> 5.0'
 gem 'redis', '~> 4.0'
 gem 'twilio-ruby'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'active_model_serializers'
