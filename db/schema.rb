@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_11_09_161531) do
     t.string "name", null: false
     t.string "dosage", null: false
     t.string "directions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_medications_on_user_id"
   end
 
