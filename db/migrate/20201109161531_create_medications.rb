@@ -5,6 +5,8 @@ class CreateMedications < ActiveRecord::Migration[5.2]
       t.string :name, null: false 
       t.string :dosage, null: false 
       t.string :directions
+
+      t.timestamps 
     end
   end
 end
