@@ -5,8 +5,8 @@ class Reminder < ApplicationRecord
   validates :time, presence: true
 
   def send_sms 
-    phone_number = self.user.phone_number
-    formated_phone_number = phone_number.split("-").unshift("+1").join()
+    user_number = self.user.phone_number
+    formated_user_number = phone_number.split("-").unshift("+1").join()
 
     @twilio_number = ENV['TWILIO_NUMBER']
     account_sid = ENV['TWILIO_ACCOUNT_SID']
@@ -17,7 +17,7 @@ class Reminder < ApplicationRecord
     end
     message = @client.messages.create(
       :from => @twilio_number,
-      :to => '+14018356233', #formated_phone_number
+      :to => formated_user_number,
       :body => body,
     )
   end
